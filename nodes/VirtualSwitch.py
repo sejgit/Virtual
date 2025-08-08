@@ -137,13 +137,13 @@ class VirtualSwitch(udi_interface.Node):
 
     def setOn(self, command=None):
         LOGGER.debug(command)
-        self.setDriver('ST', 1)
+        self.setDriver('ST', 1, True, True)
         self.switchStatus = 1
         self.storeValues()
 
     def setOff(self, command=None):
         LOGGER.debug(command)
-        self.setDriver('ST', 0)
+        self.setDriver('ST', 0, True, True)
         self.switchStatus = 0
         self.storeValues()
 
